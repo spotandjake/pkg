@@ -8,7 +8,7 @@ on:
       dep:
         description: 'Dependency'
         required: true
-        default: '@yao-pkg/pkg-fetch'
+        default: '@spotandjake/pkg-fetch'
       version:
         description: 'Version'
         required: false

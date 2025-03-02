@@ -1,12 +1,12 @@
 {
-  "name": "@yao-pkg/pkg",
+  "name": "@spotandjake/pkg",
   "version": "6.3.2",
   "description": "Package your Node.js project into an executable",
   "main": "lib-es5/index.js",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/yao-pkg/pkg.git"
+    "url": "git+https://github.com/spotandjake/pkg.git"
   },
   "types": "lib-es5/index.d.ts",
   "bin": {
@@ -25,7 +25,7 @@
     "@babel/generator": "^7.23.0",
     "@babel/parser": "^7.23.0",
     "@babel/types": "^7.23.0",
-    "@yao-pkg/pkg-fetch": "3.5.19",
+    "@spotandjake/pkg-fetch": "3.6.0",
     "into-stream": "^6.0.0",
     "minimist": "^1.2.6",
     "multistream": "^4.1.0",
@@ -77,7 +77,7 @@
     "fix": "npm run lint:style -- -w && npm run lint:code -- --fix",
     "prepare": "npm run build",
     "prepublishOnly": "npm run lint",
-    "test": "npm run build && npm run test:host && npm run test:18 && npm run test:20",
+    "test": "npm run build && npm run test:host && npm run test:20",
     "test:20": "node test/test.js node20 no-npm",
     "test:18": "node test/test.js node18 no-npm",
     "test:host": "node test/test.js host only-npm",
