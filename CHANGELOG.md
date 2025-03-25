@@ -1,3 +1,13 @@
+## [6.4.0](https://github.com/spotandjake/pkg/compare/v6.3.2...v6.4.0) (2025-03-25)
+
+### Features
+
+- Enable node 22 testing and vendor ([f258ae5](https://github.com/spotandjake/pkg/commit/f258ae57e1e0df0b9da742086ee604adb72d33b4))
+
+### Documentation
+
+- update README.md ([0238e3c](https://github.com/spotandjake/pkg/commit/0238e3c91d76087dda93c81081650a6192dfda50))
+
 ## [6.3.2](https://github.com/yao-pkg/pkg/compare/v6.3.1...v6.3.2) (2025-03-03)
 
 ### Bug Fixes
