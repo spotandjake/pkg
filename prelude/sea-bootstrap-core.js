@@ -102,6 +102,7 @@ if (manifest.debug) {
 // ENTRYPOINT PREP /////////////////////////////////////////////////
 // /////////////////////////////////////////////////////////////////
 
+process.pkg.vfs = vfs.virtualFs;
 process.argv[1] = entrypoint;
 Module._cache = Object.create(null);
 try {
