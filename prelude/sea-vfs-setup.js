@@ -341,8 +341,13 @@ class SEAProvider extends MemoryProvider {
     // Populate MemoryProvider directory tree as a safety net for edge-case
     // fallbacks to super methods (e.g., readlinkSync for non-manifest paths).
     perf.start('directory tree init');
+    console.log(seaManifest);
     for (var dir of Object.keys(seaManifest.directories)) {
       super.mkdirSync(dir, { recursive: true });
+    }
+    for (var file of Object.keys(seaManifest.offsets)) {
+      const content = this.readFileSync(file);
+      super.writeFileSync(file, content);
     }
     perf.end('directory tree init');
   }
