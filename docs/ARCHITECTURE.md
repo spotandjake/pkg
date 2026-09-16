@@ -532,6 +532,8 @@ Both bootstraps resolve symlinks on parent path components, so `require`, `fs.re
 
 **`setupProcessPkg(entrypoint)`** — Creates the `process.pkg` compatibility object with `entrypoint`, `defaultEntrypoint`, and `path.resolve()`.
 
+- Adds `process.pkg.vfs` exposing the internal virtual filesystem.
+
 **`installDiagnostic(snapshotPrefix)`** — Installs runtime diagnostics triggered by the `DEBUG_PKG` environment variable. Available in both traditional and SEA modes. The implementation lives in `prelude/bootstrap-shared.js` and is always present in the runtime bootstrap, but it is **only invoked when the binary was built with `--debug` / `-d`** — release builds omit the entrypoint call, so the diagnostic handler never runs and cannot expose the VFS tree contents.
 
 | Env Var       | Behavior                                                                                                                                                                             |
