@@ -362,6 +362,10 @@ class SEAProvider extends MemoryProvider {
     for (var dir of Object.keys(seaManifest.directories)) {
       super.mkdirSync(dir, { recursive: true });
     }
+    for (var file of Object.keys(seaManifest.offsets)) {
+      const content = this.readFileSync(file);
+      super.writeFileSync(file, content);
+    }
     perf.end('directory tree init');
   }
 
